@@ -4,7 +4,7 @@ class Phrase {
         this.phrase = phrase.toLowerCase();
 
     }
-    
+
     addPraseToDisplay(){
 
     }
@@ -16,6 +16,8 @@ class Phrase {
     showMatchedLetter() {
 
     }
+
+    
 
 
 }
