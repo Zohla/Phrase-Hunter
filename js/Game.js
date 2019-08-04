@@ -51,9 +51,10 @@ class Game {
     * @return {boolean} True if game has been won, false if game wasn't won
     */
     checkForWin() {
-        let phraseDiv = document.getElementById('phrase');
+        let shownLetters = document.getElementsByClassName('show');
+        let sumLetters = document.getElementsByClassName('letter');
 
-        if (phraseDiv.children.length == phraseDiv.getElementsByClassName('show').lenght) {
+        if (shownLetters.length == sumLetters.length) {
             return true;
         } else {
             return false;
