@@ -96,4 +96,17 @@ class Game {
 
 
     };
+
+    /**
+    * Handles onscreen keyboard button clicks
+    * @param (HTMLButtonElement) button - The clicked button element
+    */
+    handleInteraction(button) {
+        const letterClicked = button.innerText;
+        
+
+
+        
+        console.log(button);
+        };
 }
