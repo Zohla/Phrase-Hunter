@@ -40,7 +40,7 @@ class Phrase {
     checkLetter(letter) {
         return this.phrase.includes(letter) ? true : false;
     }
-    
+
     /**
     * Displays passed letter on screen after a match is found
     * @param (string) letter - Letter to display
@@ -48,16 +48,11 @@ class Phrase {
     showMatchedLetter(letter) {
         if(this.checkLetter(letter)){
             let correctLetter = document.getElementsByClassName(`${letter}`);
-            correctLetter.forEach(setAttribute('class', 'show'));
-            correctLetter.forEach(removeAttribute('class', 'hide'));
+            for (let i = 0; i < correctLetter.length; i++) {
+                correctLetter[i].classList.add('show');
+                
+            }
         }
-        // if (this.phrase.includes(letter)) {
-        //     let chosenLetter = document.getElementsByClassName(`${letter}`);
-        //     chosenLetter.removeAttribute('class', 'hide');
-        //     chosenLetter.setAttribute('class', 'show');
-
-        }
-
     }
 
     
