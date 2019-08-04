@@ -73,9 +73,7 @@ class Game {
         hearts[this.missed].src="images/lostHeart.png";
         this.missed += 1;
         if(this.missed === 5) {
-            this.gameOver(true);
-        } else {
-            this.gameOver(false) //do I need this`?
+            this.gameOver(false);
         }   
     };
 
@@ -84,12 +82,16 @@ class Game {
     * @param {boolean} gameWon - Whether or not the user won the game
     */
     gameOver(gameWon) {
-        document.getElementById('overlay').style.display = 'block';//can i use initial here?
+        const overlay = document.getElementById('overlay');
         const gameOverMessage = document.getElementById("game-over-message");
-        if (this.checkForWin === true) {
-            gameOverMessage.innerText = 'You won!';
-        } else {
+        overlay.style.display = 'block';
+        if (!gameWon) {
             gameOverMessage.innerText = 'Better luck next time!';
+            overlay.classList.add('lose');
+        } 
+        else {
+            gameOverMessage.innerText = 'You won!';
+            overlay.classList.add('win');
         }
 
 
