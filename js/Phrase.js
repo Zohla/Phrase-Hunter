@@ -33,11 +33,30 @@ class Phrase {
 
     }
 
-    checkLetter() {
-
+    /**
+    * Checks if passed letter is in phrase
+    * @param (string) letter - Letter to check
+    */
+    checkLetter(letter) {
+        return this.phrase.includes(letter) ? true : false;
     }
+    
+    /**
+    * Displays passed letter on screen after a match is found
+    * @param (string) letter - Letter to display
+    */
+    showMatchedLetter(letter) {
+        if(this.checkLetter(letter)){
+            let correctLetter = document.getElementsByClassName(`${letter}`);
+            correctLetter.forEach(setAttribute('class', 'show'));
+            correctLetter.forEach(removeAttribute('class', 'hide'));
+        }
+        // if (this.phrase.includes(letter)) {
+        //     let chosenLetter = document.getElementsByClassName(`${letter}`);
+        //     chosenLetter.removeAttribute('class', 'hide');
+        //     chosenLetter.setAttribute('class', 'show');
 
-    showMatchedLetter() {
+        }
 
     }
 
