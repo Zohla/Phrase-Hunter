@@ -8,7 +8,7 @@ class Phrase {
     * Display phrase on game board.
     * Takes the phrase, splits it, and adds placeholders and spaces.
     */
-    addPraseToDisplay(){
+    addPhraseToDisplay(){
         const phraseUl = document.getElementById('phrase');
         const splitPhrase = this.phrase.split('');
 
@@ -17,11 +17,11 @@ class Phrase {
             phraseUl.append(phraseLi);
 
             if (element === ' ') {
-                li.setAttribute('class', 'space' )
+                phraseLi.setAttribute('class', 'space' )
 
             } else {
-                li.classList.add('letter', `${element}`);
-                li.innerText = element;
+                phraseLi.classList.add('letter', `${element}`);
+                phraseLi.innerText = element;
             }
             
         });
