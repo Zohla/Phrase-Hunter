@@ -38,8 +38,8 @@ class Game {
     startGame(){
          const phraseDiv = document.getElementById('phrase'); 
          const startScreenOverlay = document.getElementById('overlay');
-        
          const keys = document.getElementsByClassName('key');
+         const hearts = document.querySelectorAll('img');
 
          while (phraseDiv.firstChild) {
              phraseDiv.removeChild(phraseDiv.firstChild);
@@ -49,6 +49,12 @@ class Game {
              keys[i].disabled = false;
              keys[i].classList.add('key');
              keys[i].classList.remove('chosen', 'wrong');
+             
+         };
+
+         for (let i = 0; i < hearts.length; i++) {
+             hearts[i].src=`images/liveHeart.png`;
+             
              
          }
              
