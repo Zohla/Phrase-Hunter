@@ -23,6 +23,23 @@ keyboard.addEventListener('click', (e) => {
     
 });
 
+document.addEventListener('keydown', (e) => {
+    const keyPressed = e.key.toLowerCase();
+    const onScreenKeys = document.getElementsByClassName('key').textContent;
+    
+   
+
+    if (onScreenKeys.includes(keyPressed)) {
+        for (let i = 0; i < onScreenKeys.length; i++) {
+           if (onScreenKeys[i] == keyPressed) {
+               onScreenKeys[i].click();
+           }
+            
+        }
+    }
+
+})
+
 
 
    
