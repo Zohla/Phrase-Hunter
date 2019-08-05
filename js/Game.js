@@ -36,7 +36,11 @@ class Game {
     * Begins game by selecting a random phrase and displaying it to user
     */
     startGame(){
+         const phraseDiv = document.getElementById('phrase'); 
          const startScreenOverlay = document.getElementById('overlay');
+         while (phraseDiv.firstChild) {
+             phraseDiv.removeChild(phraseDiv.firstChild);
+         }
          startScreenOverlay.style.display = 'none';
          this.activePhrase = this.getRandomPhrase();         
          this.activePhrase.addPhraseToDisplay();
