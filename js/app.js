@@ -11,10 +11,15 @@ startButton.addEventListener('click', function(){
 
 });
 
-document.getElementById('qwerty').addEventListener('click', (e) => {
-    if(e.target.className === 'key'){
-        game.handleInteraction(e);
+const keyboard = document.getElementById('qwerty')
+
+keyboard.addEventListener('click', (e) => {
+    let clickedLetter = e.target;    
+    
+    if(clickedLetter.className === 'key'){
+        game.handleInteraction(e.target);
     }
+    
     
 });
 
