@@ -38,9 +38,21 @@ class Game {
     startGame(){
          const phraseDiv = document.getElementById('phrase'); 
          const startScreenOverlay = document.getElementById('overlay');
+        
+         const keys = document.getElementsByClassName('key');
+
          while (phraseDiv.firstChild) {
              phraseDiv.removeChild(phraseDiv.firstChild);
          }
+         for (let i = 0; i < keys.length; i++) {
+             
+             keys[i].disabled = false;
+             keys[i].classList.add('key');
+             keys[i].classList.remove('chosen', 'wrong');
+             
+         }
+             
+         
          startScreenOverlay.style.display = 'none';
          this.activePhrase = this.getRandomPhrase();         
          this.activePhrase.addPhraseToDisplay();
