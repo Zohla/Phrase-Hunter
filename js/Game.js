@@ -125,6 +125,7 @@ class Game {
     */
     handleInteraction(button) {
         button.disabled = true;
+        
 
         if(!this.activePhrase.checkLetter(button.textContent)) {
             button.classList.add('wrong');

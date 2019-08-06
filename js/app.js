@@ -12,33 +12,39 @@ startButton.addEventListener('click', function(){
 });
 
 const keyboard = document.getElementById('qwerty')
+const resetToBodyFocus = document.getElementsByClassName('main-container');
 
 keyboard.addEventListener('click', (e) => {
     let clickedLetter = e.target;    
     
     if(clickedLetter.className === 'key'){
         game.handleInteraction(e.target);
+        resetToBodyFocus.click();
+        
     }
+    
+    
+
     
     
 });
 
 document.addEventListener('keydown', (e) => {
     const keyPressed = e.key.toLowerCase();
-    const onScreenKeys = document.getElementsByClassName('key').textContent;
+    const onScreenKeys = document.getElementsByClassName('key');
     
    
 
-    if (onScreenKeys.includes(keyPressed)) {
+    // if (onScreenKeys.includes(keyPressed)) {
         for (let i = 0; i < onScreenKeys.length; i++) {
-           if (onScreenKeys[i] == keyPressed) {
+           if (onScreenKeys[i].innerHTML === keyPressed) {
                onScreenKeys[i].click();
            }
             
         }
-    }
+   
 
-})
+});
 
 
 
