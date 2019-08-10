@@ -22,15 +22,10 @@ class Phrase {
             } else {
                 phraseLi.classList.add('letter', `${element}`);
                 phraseLi.innerText = element;
+                
             }
             
         });
-        
-
-
-
-
-
     }
 
     /**
@@ -54,8 +49,5 @@ class Phrase {
             }
         }
     }
-
-    
-
 
 }

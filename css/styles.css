@@ -21,6 +21,7 @@
 * {
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
+  
 }
 
 body {
@@ -60,9 +61,16 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: #4D85BE;
+  color: #fff;
+  
+}
+
 #btn__reset {
-	width: 200px;
-	margin: 0 auto;
+  width: 200px;
+  
+	margin: 200px auto;
 }
 
 .main-container {
@@ -72,6 +80,10 @@ button {
   height: 100%;
   max-height: 900px;
   text-align: center;
+  background-image: url('../images/milky-way-2695569_1920.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 
 .section {
@@ -86,7 +98,8 @@ button {
 /* Title */
 
 .header {
-  color: #3a3f58;
+  color: #4D85BE;
+  text-shadow: 2px 2px 3px #E5E5E5;
 }
 
 
@@ -131,14 +144,14 @@ button {
 }
 
 .chosen {
-  background: #3a3f58;
+  background: #4ac0d5;
   border-radius: 5px;
   font-size: var(--font-size-medium);
   color: #FFFFFF;
 }
 
 .wrong {
-  background: #f7a964;
+  background:#8c2363;
   color: #FFFFFF;
 }
 
@@ -177,6 +190,8 @@ button {
 
 .title {
   color: #FFF;
+  margin-top: 200px;
+
 }
 
 .start {
@@ -188,6 +203,7 @@ button {
 }
 
 .win {
+  
   background-color: var(--color-win);
 }
 
@@ -196,7 +212,7 @@ button {
 }
 
 .lose {
-  background-color: #f5785f;
+  background-color: #8c2363;
 }
 
 .lose a {

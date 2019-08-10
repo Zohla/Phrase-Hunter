@@ -18,10 +18,9 @@ class Game {
             new Phrase('Walk this way'), 
             new Phrase('Thunderstruck'), 
             new Phrase('Born to be wild'), 
-            new Phrase('Nothing else matters')
+            new Phrase('Free bird')
         ];
         return gamePhrases;
-
     };
 
     /**
@@ -54,19 +53,15 @@ class Game {
 
          for (let i = 0; i < hearts.length; i++) {
              hearts[i].src=`images/liveHeart.png`;
-             
-             
+                 
          }
              
-         
          startScreenOverlay.style.display = 'none';
          this.activePhrase = this.getRandomPhrase();         
          this.activePhrase.addPhraseToDisplay();
+         startScreenOverlay.classList.remove('lose', 'win')
     };
 
-    handleInteraction(){
-
-    };
 
     /**
     * Checks for winning move
@@ -106,17 +101,17 @@ class Game {
     gameOver(gameWon) {
         const overlay = document.getElementById('overlay');
         const gameOverMessage = document.getElementById("game-over-message");
+        const buttons = document.getElementsByClassName('key')
         overlay.style.display = 'block';
         if (!gameWon) {
             gameOverMessage.innerText = 'Better luck next time!';
-            overlay.classList.add('lose');
+            overlay.classList.add('lose')
+            
         } 
         else {
             gameOverMessage.innerText = 'You won!';
             overlay.classList.add('win');
         }
-
-
     };
 
     /**
@@ -132,6 +127,7 @@ class Game {
             this.removeLife();
         } else {
             button.classList.add('chosen');
+            
             this.activePhrase.showMatchedLetter(button.textContent);
             this.checkForWin();
         }
@@ -139,12 +135,6 @@ class Game {
         if(this.checkForWin()) {
             this.gameOver(true);
         }
-
-        
-
-
-
-        
         console.log(button);
         };
 }
