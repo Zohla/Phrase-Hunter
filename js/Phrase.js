@@ -2,8 +2,7 @@
 class Phrase {
     constructor(phrase) {
         this.phrase = phrase.toLowerCase();
-
-    }
+    };
     /**
     * Display phrase on game board.
     * Takes the phrase, splits it, and adds placeholders and spaces.
@@ -24,9 +23,8 @@ class Phrase {
                 phraseLi.innerText = element;
                 
             }
-            
         });
-    }
+    };
 
     /**
     * Checks if passed letter is in phrase
@@ -50,4 +48,4 @@ class Phrase {
         }
     }
 
-}
+};
