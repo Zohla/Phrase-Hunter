@@ -15,4 +15,4 @@ This includes:
 - made the games background an image while not in the start/restart overlay
 - changed the color theme in the game to better fit the background image. 
 - added text-shadow to the in-game header to make it more visible on the background image. 
-- added hover effect to buttons. 
+- added hover effect to all buttons. 
