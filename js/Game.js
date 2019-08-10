@@ -1,5 +1,4 @@
 
-
 class Game {
     constructor(){
         this.missed = 0;
@@ -106,7 +105,6 @@ class Game {
         if (!gameWon) {
             gameOverMessage.innerText = 'Better luck next time!';
             overlay.classList.add('lose')
-            
         } 
         else {
             gameOverMessage.innerText = 'You won!';
@@ -120,7 +118,6 @@ class Game {
     */
     handleInteraction(button) {
         button.disabled = true;
-        
 
         if(!this.activePhrase.checkLetter(button.textContent)) {
             button.classList.add('wrong');
