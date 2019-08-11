@@ -70,11 +70,7 @@ class Game {
         let shownLetters = document.getElementsByClassName('show');
         let sumLetters = document.getElementsByClassName('letter');
 
-        if (shownLetters.length == sumLetters.length) {
-            return true;
-        } else {
-            return false;
-        }
+        return (shownLetters.length == sumLetters.length) ? true : false;
     };
 
     /**
@@ -102,6 +98,7 @@ class Game {
         const gameOverMessage = document.getElementById("game-over-message");
         const buttons = document.getElementsByClassName('key')
         overlay.style.display = 'block';
+        buttons.disabled = true;
         if (!gameWon) {
             gameOverMessage.innerText = 'Better luck next time!';
             overlay.classList.add('lose')
